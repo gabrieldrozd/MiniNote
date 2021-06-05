@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 
 namespace MiniNote.Database.Models
 {
-    class UserLoginDetails
+    public class UserLoginDetail
     {
         [Key]
         public string UserName { get; set; }
         public string Password { get; set; }
+
+
+        // f
+        // user connected to login_details
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }

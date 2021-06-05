@@ -7,13 +7,17 @@ using System.Threading.Tasks;
 
 namespace MiniNote.Database.Models
 {
-    class Note
+    public class Note
     {
-        [Key]
         public int NoteId { get; set; }
         public string NoteName { get; set; }
         public string NoteContent { get; set; }
         public string NoteDescription { get; set; }
         public DateTime NoteCreationDate { get; set; }
+
+
+        // f
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }

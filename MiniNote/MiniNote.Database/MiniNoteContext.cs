@@ -7,7 +7,10 @@ namespace MiniNote.Database
 {
     public class MiniNoteContext : DbContext
     {
-        public DbSet<Note> NotesClass { get; set; }
+        public DbSet<Note> Notes { get; set; }
+        public DbSet<WorkTask> WorkTasks { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserLoginDetail> UserLoginDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
