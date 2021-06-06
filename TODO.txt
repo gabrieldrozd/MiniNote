@@ -1,0 +1,19 @@
+﻿id uzytkownika oraz nazwa maja byc pokazane w textboxie caly czas
+zeby byla latwosc dostepu do tych informacji i przydzielenie notatki/zadania do usera
+
+WINDOW 1 - domyślnie
+ekran logowania
+
+WINDOW 2 - opcjonalnie (wybór z okna logowania)
+ekran rejestracji nowego uzytkownika
+
+WINDOW 3
+po wejsciu do apki kolejny ekran
+domyslnie dostep na lewym pasku do opcji wylogowania
+zakladki z zadaniami, notatkami
+....... moze statystyki? ile uzytkownik ma notatek i zadan
+
+to mozna rozbic na dwa/trzy okna
+notatki
+zadania
+ekran glowny na ktorym moze byc informacja o statystykach wlasnie.
