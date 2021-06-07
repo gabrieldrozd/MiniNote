@@ -1,0 +1,30 @@
+﻿ZROBIONE:
+
+=========
+LoginWindow:
++ XAML
++ logika wyłączenia
++ logika tworzenia nowego konta
++ logika przejscia do MainStartWindow
+=========
+
+
+=========
+RegisterWindow:
++ XAML
++ sprawdzenie pustych pól
++ sprawdzenie poprawności kluczowych pól
++ tworzenie użytkownika już po sprawdzeniu
+=========
+
+
+=========
+MainWindow:
+- XAML
+- logika ogólnie
+	MainPage
+	NotePage
+	WorkTaskPage
+	DoneWorkTaskPage - dodac do MiniNote.Database.Models???
+
+=========

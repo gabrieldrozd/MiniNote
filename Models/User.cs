@@ -7,9 +7,9 @@ namespace MiniNote.Database.Models
     {
         [Key]
         public int UserId { get; set; }
-        public string DisplayName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string EmailAddress { get; set; }
 
         // f
         // Users notes and work_tasks

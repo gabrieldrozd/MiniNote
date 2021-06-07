@@ -1,0 +1,112 @@
+﻿POPUP
+xaml:
+<Popup x:Name="AlertPopup" Width="200" Height="50" PopupAnimation="Fade" Placement="Center">
+            <Button x:Name="signUpButton" Content="Sign Up" Click="signUpButton_Click"/>
+        </Popup>
+        <TextBox x:Name="txtBox1" Background="OliveDrab" Width="200" Height="50" FontSize="18" TextChanged="txtBox1_TextChanged"/>
+
+C#
+private void txtBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtBox1.Text == "1")
+            {
+                AlertPopup.IsOpen = true;
+            }
+            else
+            {
+                AlertPopup.IsOpen = false;
+            }
+        }
+
+
+SPRAWDZENIE CZY REKORD ISTNIEJE JUZ
+using (WebApplication1Entities db = new WebApplication1Entities())
+{
+   var order = db.Orders.GetAll().Where(x=> x.Transaction == txnId).FirstOrDefault();
+   if(order != null) // update
+   {
+      //.....
+      db.SaveChanges();
+    }
+   else
+   {
+      // new
+   }
+}
+
+OR
+
+using (WebApplication1Entities db = new WebApplication1Entities())
+    {
+        if (db.Orderss.Any(o => o.Transaction == txnId)) return;
+
+        Orders order = new Orders();
+        order.UserId = userId;
+        order.Date = System.DateTime.Now;
+        order.Transaction = txnId;
+        order.Amount = Convert.ToDecimal(mcGross);
+        order.Email = payerEmail;
+        order.Country = residenceCountry;
+
+        db.Orderss.Add(order);
+        db.SaveChanges();
+    }
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+DODAWANIE NOTATEK I WORKTASKOW DO DB
+private void AddNote()
+        {
+            using (var db = new MiniNoteContext())
+            {
+                //var userTable = db.User;
+                //var userDetailsTable = db.UserLoginDetail;
+                var noteTable = db.Note;
+                var workTaskTable = db.WorkTask;
+
+                var note = new Note
+                {
+                    NoteName = "exercise",
+                    NoteContent = "zrobic zadanie na angielski",
+                    NoteDescription = "mozliwa dodatkowa ocena",
+                    NoteCreationDate = DateTime.Today,
+                    
+                    // UserId ściągane z labela, w ktorym beda dane uzytkownika zapisane i pokazane
+                    // kazde okno po zalogowaniu ma miec taki label
+                    UserId = 2
+                };
+
+                var workTask = new WorkTask
+                {
+                    WorkTaskName = "exercise",
+                    WorkTaskContent = "zrobic zadanie na angielski",
+                    WorkTaskDescription = "mozliwa dodatkowa ocena",
+                    WorkTaskCreationDate = DateTime.Now,
+                    WorkTaskDateOfExecution = DateTime.Now.AddDays(2),
+                    
+                    UserId = 2
+                };
+
+                //noteTable.Add(note);
+                workTaskTable.Add(workTask);
+                db.SaveChanges();
+
+                //var userLogin = new UserLoginDetail
+                //{
+                //    UserName = "werochal",
+                //    Password = "lahcorew"
+                //};
+
+                //var user = new User
+                //{
+                //    DisplayName = "weronikaochal",
+                //    FirstName = "Weronika",
+                //    LastName = "Ochal",
+                //    UserLoginDetail = userLogin
+                //};
+
+                //userTable.Add(user);
+                //userDetailsTable.Add(userLogin);
+                //db.SaveChanges();
+            }
+        }

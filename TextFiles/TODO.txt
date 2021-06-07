@@ -1,0 +1,37 @@
+﻿==============================
+ustawic pages -> XAML
+WorkTask oraz Note
+
+zaplanowac glowne okno aplikacji MainWindow
+
+zastanowic sie co nad Frame'em wrzucic (info o tym kiedy najblizszy termin realizacji zadania)
+
+WorkTask - aktualne zadania ( jak ustawic date kiedy ma zostac wykonane zadanie)
+DoneWorkTask - wykonane zadania
+
+
+
+main window: (buttony zmieniajace pages) - LEWY PANEL
+info
+notatki - dodaj usun zmien
+zadania - dodaj wykonaj zmien
+wykonane zadania  - sprawdz jakie zostaly wykonane
+wylacz
+
+
+==============================
+
+id uzytkownika oraz nazwa maja byc pokazane w textboxie caly czas
+zeby byla latwosc dostepu do tych informacji i przydzielenie notatki/zadania do usera
+
+WINDOW 3
+po wejsciu do apki kolejny ekran
+domyslnie dostep na lewym pasku do opcji wylogowania
+zakladki z zadaniami, notatkami
+....... moze statystyki? ile uzytkownik ma notatek i zadan
+
+to mozna rozbic na dwa/trzy okna
+notatki
+zadania
+ekran glowny na ktorym moze byc informacja o statystykach wlasnie.
+
